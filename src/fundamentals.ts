@@ -8,48 +8,48 @@ import "./scss/styles.scss";
 /**
  * var vs let/const
  */
-/*
-function main() {
+
+(function main() {
   console.log("START");
   if (true) {
     var lang = "vi";
-    let target = "en-us";
+    var target = "en-us";
     console.log("inside block");
     console.log(target);
   }
   console.log(lang);
   console.log(target);
-}
- */
-/*
-function main() {
+})();
+
+
+(function main() {
   var x = 5;
   console.log(x);
   var x = 10;
   console.log(x);
 
-  let y = 55;
+  var y = 55;
   console.log(y);
-  let y = 100;
+  var y = 100;
   console.log(y);
-}
-*/
+})();
 
-/*
-function main() {
+
+
+(function main() {
   console.log(x);
   var x = 5;
 
   console.log(y);
-  let y = 10;
-}
- */
+  var y = 10;
+})();
+
 
 /**
  * Data types
  */
-/*
-function main() {
+
+(function main() {
   let message: string;
   let total: number = 100;
   let isProduction = true;
@@ -80,9 +80,11 @@ function main() {
   unknown = 'changed';
 
   const post: IPost = {
-
+      id:"10",
+      title:"fgh",
+      body :"kjh",
   };
-  message = 50;
+    message = "50";
 
   function getPost(postId: string): IPost {
     // do something to retrieve post
@@ -93,8 +95,7 @@ function main() {
       extra: 'data'
     } as IPost;
   }
-}
- */
+})();
 
 function main() {}
 
